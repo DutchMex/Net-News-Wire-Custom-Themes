@@ -1,14 +1,10 @@
 # Net-News-Wire-Custom-Themes
 
-This is the home for my personal edition of the Net News Wire themes.
+Sunset is a calm theme loosely inspired by sunsets in the Pacific Northwest.
 
-Inspired by this [community led public repository of NNW Themes on GitHub](https://dave-atx.github.io/nnw-theme-marketplace/get-listed/) and also from a desire to customize NNW to my liking and have it available on multiple computers. Yay `git` lol.
-
-Sunset is the main theme, but if I add more themes I will put the files in here.
+Inspired by this [community led public repository of NNW Themes on GitHub](https://dave-atx.github.io/nnw-theme-marketplace/) and also from a desire to customize NNW to my liking and have it available on multiple computers. Yay `git` lol.
 
 ## Sunset
-
-I should probably change its name to something fancier, but it’s the only one for now.
 
 This theme relies on two important fonts, [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), and [Maple Mono NF](https://font.subf.dev/en/).
 

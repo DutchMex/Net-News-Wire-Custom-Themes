@@ -1,0 +1,58 @@
+name: Release Sunset Theme
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - sunset.nnwtheme/Info.plist
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read theme version
+        id: version
+        run: |
+          VERSION=$(python3 -c 'import plistlib; print(plistlib.load(open("sunset.nnwtheme/Info.plist", "rb"))["Version"])')
+          if [[ -z "$VERSION" ]]; then
+            echo "Version is missing from sunset.nnwtheme/Info.plist" >&2
+            exit 1
+          fi
+          echo "value=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Check whether version is already tagged
+        id: tag
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if git rev-parse --verify --quiet "refs/tags/$TAG" >/dev/null; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Package theme
+        if: steps.tag.outputs.needed == 'true'
+        run: zip -r "$RUNNER_TEMP/sunset.nnwtheme.zip" sunset.nnwtheme
+
+      - name: Create GitHub release
+        if: steps.tag.outputs.needed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.value }}
+        run: >-
+          gh release create "$TAG" "$RUNNER_TEMP/sunset.nnwtheme.zip"
+          --target "$GITHUB_SHA"
+          --title "Sunset $VERSION"
+          --notes "Sunset theme version $VERSION."

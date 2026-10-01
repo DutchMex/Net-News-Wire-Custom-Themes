@@ -44,8 +44,8 @@ a:hover {
 	--article-date-color: oklch(0.5283 0.13281250000000003 68);
 	--table-cell-border-color: lightgray;
 	
-	--font-article: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif, "SF Pro Text", "Arial";
-	--font-mono: "Maple Mono NF", ui-monospace, Menlo, monospace, "Andale Mono";
+	--font-article: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
+	--font-mono: "Maple Mono NF", ui-monospace, Menlo, monospace;
 	--code-background: oklch(0.9238 0.05468750000000002 0);
     --accent-color: oklch(0.5283 0.13281250000000003 68);
 	--link-visited: oklch(0.4146 0.10312500000000004 68);

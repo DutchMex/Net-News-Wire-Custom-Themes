@@ -14,6 +14,6 @@ This theme relies on two important fonts, [Atkinson Hyperlegible](https://www.br
 
 Currently, it just falls back to MacOS system fonts, so if the custom ones are not installed on your system, the theme will look pretty basic. You only need the “Regular” version of each font, but the full fonts are included in the `.zip` files.
 
-The fonts can be downloaded from the links above, or downloaded either from the `.ttf` files in `Fonts/` or the `.zip` files in that same folder.
+The fonts can be downloaded from the links above, or downloaded from the `.zip` files in Fonts.
 
 ![Sunset theme preview](/images/theme-preview.png)

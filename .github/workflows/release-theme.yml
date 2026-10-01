@@ -55,4 +55,4 @@ jobs:
           gh release create "$TAG" "$RUNNER_TEMP/sunset.nnwtheme.zip"
           --target "$GITHUB_SHA"
           --title "Sunset $VERSION"
-          --notes "Sunset theme version $VERSION."
+          --generate-notes

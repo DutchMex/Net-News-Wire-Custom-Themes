@@ -2,6 +2,8 @@
 
 This is the home for my personal edition of the Net News Wire themes.
 
+Inspired by this [community led public repository of NNW Themes on GitHub](https://dave-atx.github.io/nnw-theme-marketplace/get-listed/) and also from a desire to customize NNW to my liking and have it available on multiple computers. Yay `git` lol.
+
 Sunset is the main theme, but if I add more themes I will put the files in here.
 
 ## Sunset

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
+<plist version="1.0.1">
 <dict>
 	<key>Name</key>
 	<string>Sunset</string>
 	<key>ThemeIdentifier</key>
-	<string>uk.co.dx13.nnwthemes.sunset</string>
+	<string>com.kicking-cans.nnwthemes.sunset</string>
 	<key>CreatorHomePage</key>
 	<string>https://kicking-cans.com</string>
 	<key>CreatorName</key>

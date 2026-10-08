@@ -267,6 +267,7 @@ img, figure, video, div, object {
 }
 
 img {
+	height: auto !important;
 	border-radius: 5pt;
 	box-shadow: var(--shadow-elevation-medium);
 }
